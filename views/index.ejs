@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+<div class="container">
+	<row>
+		<h1 class="text-center">
+			Add Your To-Do Items!
+		</h1>
+	<form class="col-xs-12 col-lg-6 mx-auto" action="/newToDo" method=POST>
+		<div class="input-group">
+			<input type="text" class="form-control" name="item" placeholder="Add a to-do item!"> <span> <button type="submit" class="btn 			 btn-primary">Submit</button></span>
+		</div>
+	</form>
+	</row>
+	
+	<div class="row">
+		<ul class="col-6 mx-auto">
+		<% for(i=0; i < toDoList.length; i++){ %>
+									 
+			<li> <%= toDoList[i].name %> <button class="btn btn-danger"></button></li>
+		<% } %>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+<% include ./partials/footer %>
